@@ -1,7 +1,7 @@
 # Docker file that installs docker container for Selenzyme
 #
 # build with: "sudo docker build -t selenzyme ."
-FROM continuumio/anaconda3 
+FROM continuumio/anaconda3:4.4.0
 
 # Install rdkit
 RUN conda install -c rdkit rdkit
