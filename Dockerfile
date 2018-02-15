@@ -3,6 +3,8 @@
 # build with: "sudo docker build -t selenzyme ."
 FROM continuumio/anaconda3:4.4.0
 
+RUN ls -l
+
 # Install rdkit
 RUN conda install -c rdkit rdkit
 RUN conda install -c conda-forge flask-restful
