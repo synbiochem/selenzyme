@@ -102,3 +102,6 @@ ENV/
 /.DS_Store
 /.project
 /.pydevproject
+
+/selenzyme/
+/selenzy.tar.gz
