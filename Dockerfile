@@ -10,12 +10,8 @@ RUN conda install -c anaconda biopython
 RUN conda install -c bioconda emboss
 RUN conda install -c biobuilds t-coffee
 
-# To be replace by a git clone
-RUN wget http://130.88.113.226/selenzy/selenzy.tar.gz
-RUN tar -xzvf selenzy.tar.gz
-
+RUN cd selenzyme
 ENTRYPOINT ["python"]
-
-CMD ["/selenzyPro/flaskform.py", "-uploaddir", "/selenzyPro/uploads", "-datadir", "/selenzyPro/data", "-logdir", "/selenzyPro/log"]
+CMD ["selenzyPro/flaskform.py", "-uploaddir", "selenzyPro/uploads", "-datadir", "selenzyPro/data", "-logdir", "selenzyPro/log"]
 
 EXPOSE 5000
