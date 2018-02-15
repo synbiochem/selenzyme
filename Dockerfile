@@ -11,6 +11,6 @@ RUN conda install -c bioconda emboss=6.5.7
 RUN conda install -c biobuilds t-coffee=11.00
 
 ENTRYPOINT ["python"]
-CMD ["/selenzyme/selenzyPro/flaskform.py", "-uploaddir", "/selenzyme/selenzyPro/uploads", "-datadir", "/selenzyme/selenzyPro/data", "-logdir", "selenzyPro/log"]
+CMD ["/selenzyme/selenzyPro/flaskform.py", "-uploaddir", "/selenzyme/selenzyPro/uploads", "-datadir", "/selenzyme/selenzyPro/data", "-logdir", "/selenzyme/selenzyPro/log"]
 
 EXPOSE 5000
