@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 DIR=$(cd "$(dirname "$0")"; pwd)
 
-docker stop $(docker ps -a -q)
-docker rm $(docker ps -a -q)
-docker rmi $(docker images -q)
+docker stop selenzyme #$(docker ps -a -q)
+docker rm selenzyme #$(docker ps -a -q)
+docker rmi selenzyme #$(docker images -q)
 
 rm -rf selenzyme
 mkdir selenzyme
