@@ -5,8 +5,9 @@ docker stop selenzyme #$(docker ps -a -q)
 docker rm selenzyme #$(docker ps -a -q)
 docker rmi selenzyme #$(docker images -q)
 
-rm -rf selenzyme
+sudo rm -rf selenzyme
 mkdir selenzyme
+rm selenzy.tar.gz
 wget http://130.88.113.226/selenzy/selenzy.tar.gz
 tar -xzvf selenzy.tar.gz -C selenzyme
 
