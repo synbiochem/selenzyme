@@ -12,7 +12,7 @@ wget http://130.88.113.226/selenzy/selenzy.tar.gz
 tar -xzvf selenzy.tar.gz -C selenzyme
 
 # Base container, build only once
-#docker build -t sbc/selenzybase -f Dockerfile.base
+#docker build -t sbc/selenzybase -f Dockerfile.base .
 
 docker build -t selenzyme .
 
