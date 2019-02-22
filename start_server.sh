@@ -11,6 +11,9 @@ rm selenzy.tar.gz
 wget http://130.88.113.226/selenzy/selenzy.tar.gz
 tar -xzvf selenzy.tar.gz -C selenzyme
 
+# Base container, build only once
+#docker build -t sbc/selenzybase -f Dockerfile.base
+
 docker build -t selenzyme .
 
 docker run --name nginx-proxy -d -p 80:80 -p 88:7700 -v /var/run/docker.sock:/tmp/docker.sock:ro jwilder/nginx-proxy
