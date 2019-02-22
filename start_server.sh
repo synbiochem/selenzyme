@@ -6,13 +6,15 @@ docker rm selenzyme #$(docker ps -a -q)
 docker rmi selenzyme #$(docker images -q)
 
 sudo rm -rf selenzyme
-mkdir selenzyme
 rm selenzy.tar.gz
+
+# Base container, build only once before installing selenzyme
+#docker build -t sbc/selenzybase -f Dockerfile.base .
+
+mkdir selenzyme
 wget http://130.88.113.226/selenzy/selenzy.tar.gz
 tar -xzvf selenzy.tar.gz -C selenzyme
 
-# Base container, build only once
-#docker build -t sbc/selenzybase -f Dockerfile.base .
 
 docker build -t selenzyme .
 
