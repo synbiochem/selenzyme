@@ -18,6 +18,7 @@ DATASET='s886f5hbgk'
 VERSION='1'
 wget "https://data.mendeley.com/archiver/${DATASET}?version=${VERSION}" -O data.zip
 unzip -o data.zip
+echo -e "import zipfile\nzipfile.ZipFile('data.zip','r').extractall('.')" | python
 tar -xzvf data.tar.gz
 rm data.tar.gz
 rm data.zip
