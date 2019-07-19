@@ -6,15 +6,25 @@ docker rm selenzyme #$(docker ps -a -q)
 docker rmi selenzyme #$(docker images -q)
 
 sudo rm -rf selenzyme
-rm selenzy.tar.gz
 
 # Base container, build only once before installing selenzyme
 #docker build -t sbc/selenzybase -f Dockerfile.base .
 
 mkdir selenzyme
-wget http://130.88.113.226/selenzy/selenzy.tar.gz
-tar -xzvf selenzy.tar.gz -C selenzyme
-
+cd selenzyme
+git clone --single-branch --branch Flask https://github.com/pablocarb/selenzy.git selenzyPro
+cd selenzyPro
+DATASET='s886f5hbgk'
+VERSION='1'
+wget "https://data.mendeley.com/archiver/${DATASET}?version=${VERSION}" -O data.zip
+unzip -o data.zip
+tar -xzvf data.tar.gz
+rm data.tar.gz
+rm data.zip
+mkdir -p log
+mkdir -p uploads 
+cd ..
+cd ..
 
 docker build -t selenzyme .
 
