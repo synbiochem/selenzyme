@@ -8,7 +8,8 @@ docker rmi selenzyme #$(docker images -q)
 sudo rm -rf selenzyme
 
 # Base container, build only once before installing selenzyme
-#docker build -t sbc/selenzybase -f Dockerfile.base .
+docker build -t sbc/selenzybase -f Dockerfile.base .
+docker build -t selenzyme .
 
 mkdir selenzyme
 cd selenzyme
@@ -25,8 +26,6 @@ mkdir -p log
 mkdir -p uploads 
 cd ..
 cd ..
-
-docker build -t selenzyme .
 
 docker run --name nginx-proxy -d -p 80:80 -p 88:7700 -v /var/run/docker.sock:/tmp/docker.sock:ro jwilder/nginx-proxy
 
