@@ -13,7 +13,7 @@ docker build -t selenzyme .
 
 mkdir selenzyme
 cd selenzyme
-git clone --single-branch --branch Flask https://github.com/pablocarb/selenzy.git selenzyPro
+git clone --single-branch --branch v1.0 https://github.com/pablocarb/selenzy.git selenzyPro
 cd selenzyPro
 DATASET='s886f5hbgk'
 VERSION='1'
