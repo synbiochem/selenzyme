@@ -4,8 +4,8 @@
 FROM continuumio/anaconda3:5.2.0
 
  # Installtool: emboss=5.5.7s
-RUN conda install -c conda-forge flask-restful=0.3.6 --no-update-dependencies \
-  && conda install -c bioconda emboss=6.5.7 \
+RUN conda install -c bioconda emboss=6.5.7 \
   && conda install -c rdkit rdkit=2017.09.3.0 \
-  && conda install -c anaconda biopython=1.69 \
-  && conda install -c biobuilds t-coffee=11.00
+  && conda install -c conda-forge biopython=1.76 \
+  && conda install -c biobuilds t-coffee=11.00 \
+  && conda install -c conda-forge flask-restful=0.3.6
