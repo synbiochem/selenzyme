@@ -27,5 +27,3 @@ RUN conda install -c conda-forge python=3.6.6 \
   && conda install -c conda-forge func_timeout=4.3.5 \
   && pip install rxnmapper
 
-
-

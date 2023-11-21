@@ -1,5 +1,6 @@
 # Docker file that installs docker container for Selenzyme
 #
+
 # build with: "sudo docker build -t -i selenzyme_new ."
 # sbc/selenzyme is the base image
 FROM sbc/selenzybase2023

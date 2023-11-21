@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-
 #### Building the directory to mount
 
 echo "Remake selenzyme2 folder? yes:1, no:0"
