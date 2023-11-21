@@ -318,7 +318,7 @@ def run(raw_data_folder, data_folder):
 
     rxn_mapper = RXNMapper()
 
-    reaction_smiles = {}
+    # reaction_smiles = {}
     aam_issues = {'tooBig':[], 'starSmiles' :[], 'unknown' : [], 'mappingFailure': []}
     reaction_issues = {'same_sub_prod' :set(), 'emptyReactions': set(), 'emptyReactions_fp': set(), 'emptyReactions_stars': set(),  'missingRFs': {}}
     compound_issues = {}
@@ -354,7 +354,7 @@ def run(raw_data_folder, data_folder):
             continue
         
         # get the smiles for reac_smi 
-        reaction_smiles[reaction] = '.'.join([comp_smiles[x] for x in subs]) + '>>' + '.'.join([comp_smiles[x] for x in prods])
+        # reaction_smiles[reaction] = '.'.join([comp_smiles[x] for x in subs]) + '>>' + '.'.join([comp_smiles[x] for x in prods])
 
         # the AAM can't process smiles with stars
         subs = set([x for x in subs if '*' not in comp_smiles[x]])
@@ -483,10 +483,10 @@ def run(raw_data_folder, data_folder):
 
 
     # save the reac_smi.csv 
-    with open(data_folder / 'reac_smi.csv', 'w') as f:
-        f.write('RID,SMILES')
-        for k, v in  reaction_smiles.items():
-            f.write('\n' + k+','+v)
+    # with open(data_folder / 'reac_smi.csv', 'w') as f:
+    #     f.write('RID,SMILES')
+    #     for k, v in  reaction_smiles.items():
+    #         f.write('\n' + k+','+v)
 
     # save cleaned reac_prop 
     reac_prop2 = reac_prop.drop('index', axis=1)
