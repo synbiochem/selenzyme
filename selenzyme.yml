@@ -1,0 +1,17 @@
+channels:
+  - conda-forge
+  - bioconda
+  - biobuilds
+  - rdkit
+dependencies:
+  - conda-forge::python=3.6.6
+  - pip
+  - bioconda::emboss=6.5.7
+  - rdkit::rdkit=2020.03.3.0
+  - conda-forge::biopython=1.76
+  - biobuilds::t-coffee=11.00
+  - conda-forge::flask=1.1.2
+  - conda-forge::flask-restful=0.3.6
+  - conda-forge::func_timeout=4.3.5
+  - pip:
+      - rxnmapper 
